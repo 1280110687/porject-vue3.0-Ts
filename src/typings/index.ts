@@ -1,21 +1,24 @@
 interface ITodo {
   id: number;
   content: string;
-  status: TODO_STATUS
+  status: TODO_STATUS;
 }
 
 interface IState {
-  list: ITodo[]
+  list: ITodo[];
+  footerTabList: IfooterTabList[];
+}
+
+interface IfooterTabList {
+  name: string;
+  path: string;
+  icon: string;
 }
 
 enum TODO_STATUS {
   WILLDO = 'willdo',
   DOING = 'doing',
-  FINISHED = 'finished'
+  FINISHED = 'finished',
 }
 
-export {
-  ITodo,
-  IState,
-  TODO_STATUS,
-}
+export { ITodo, IState, TODO_STATUS, IfooterTabList };
